@@ -23,7 +23,9 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        args: cd /var/www/test2/||ls -l  
+        commands: 
+          cd /var/www/test2/
+          ls -l  
 
    
 
