@@ -23,8 +23,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd /var/www/test2/
-        script: ls -l  
+        command: cd /var/www/test2/
+                 ls -l  
 
    
 
