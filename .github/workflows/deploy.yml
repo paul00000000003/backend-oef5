@@ -1,27 +1,21 @@
+name: scp files
+on: [push]
+jobs:
 
-name : Deploy
-
-
-on   : [push]
-
-
-jobs : 
-  build :
-    runs-on : ubuntu-latest
-
-    
-    steps :
-    - uses: actions/checkout@v1
-
-
-    - name: Copy repository contents on scp
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.PORT }}
         source: "."
-        target: "/var/www/test2" 
+        target: "/var/www/test2"
    
 
 
