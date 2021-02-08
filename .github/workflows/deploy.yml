@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: cd /var/www/test2/
-                ls -l  
+        script: ls -l  
 
    
 
