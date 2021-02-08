@@ -17,13 +17,13 @@ jobs:
         source: "."
         target: "/var/www/test2"
     - name: executing a remote command
-      uses: appleboy/scp-action@master
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        command: ls  
+        script: ls  
 
    
 
