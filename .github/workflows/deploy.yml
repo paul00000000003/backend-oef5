@@ -16,11 +16,12 @@ jobs :
 
     - name: Copy repository contents on scp
       uses: appleboy/scp-action@master
-      host: ${{ secrets.HOST }}
-      username: ${{ secrets.USERNAME }}
-      key: ${{ secrets.SSHKEY }}
-      source: "."
-      target: "/var/www/test2" 
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        source: "."
+        target: "/var/www/test2" 
    
 
 
