@@ -11,4 +11,4 @@ def test_main():
     assert response.data == b'MOoooOo!'
     response = app.test_client().get('/bijnajarig')
     assert response.status_code == 200
-    assert response.data == b'almost-bd!'
+    assert response.data == b'almost-b-d!'
